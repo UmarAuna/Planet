@@ -18,13 +18,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.planets.R
 import com.example.planets.model.PlanetData
 import com.example.planets.model.Planets
-import com.example.planets.ui.theme.PlanetTheme
+import com.example.planets.ui.theme.NewPlanetTheme
+import com.example.planets.ui.theme.Typography
 
 @Composable
 fun PlanetScreen(planet: Planets) {
@@ -61,9 +61,9 @@ fun PlanetScreen(planet: Planets) {
                 Text(
                     planet.planetName,
                     color = MaterialTheme.colors.onSurface,
-                    style = MaterialTheme.typography.h5,
-                    fontFamily = FontFamily.Monospace,
-                    fontWeight = FontWeight.Bold,
+                    style = Typography.Heading.heading2Black,
+                   /* fontFamily = FontFamily.Monospace,
+                    fontWeight = FontWeight.Bold,*/
                 )
                 Spacer(modifier = Modifier.height(5.dp))
                 PlanetDetailText(stringResource(R.string.surface_temperature), planet.surfaceTemperature)
@@ -104,7 +104,7 @@ fun PlanetDetailText(planetHolder: String, planetText: String, modifier: Modifie
 
 @Preview(
     showBackground = true,
-    //  showSystemUi = true,
+    // showSystemUi = true,
     uiMode = Configuration.UI_MODE_NIGHT_NO,
     name = "Light Mode"
 )
@@ -116,7 +116,7 @@ fun PlanetDetailText(planetHolder: String, planetText: String, modifier: Modifie
     name = "Dark Mode"
 )
 fun PlanetDetailPreview() {
-    PlanetTheme {
+    NewPlanetTheme {
         // A surface container using the 'background'color from the theme
         Surface(color = MaterialTheme.colors.background) {
             val planets = PlanetData.singlePlanet

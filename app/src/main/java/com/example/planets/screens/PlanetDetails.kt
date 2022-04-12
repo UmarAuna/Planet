@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import com.example.planets.model.Planets
-import com.example.planets.ui.theme.PlanetTheme
+import com.example.planets.ui.theme.NewPlanetTheme
 
 class PlanetDetails : ComponentActivity() {
 
@@ -16,7 +16,7 @@ class PlanetDetails : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            PlanetTheme {
+            NewPlanetTheme {
                 Surface(color = MaterialTheme.colors.background) {
                     PlanetScreen(planet)
                 }

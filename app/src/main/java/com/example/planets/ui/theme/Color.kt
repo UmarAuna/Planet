@@ -22,3 +22,14 @@ val light = lightColors(primary = white100, background = white300)
 val black100 = Color(0xff566573)
 val black300 = Color(0xff273746)
 val dark = darkColors(primary = black100, background = black300)
+
+val White1 = Color(0xffFFFFFF) // card // primary
+val White2 = Color(0xffECECEC) // background
+// val White3 = Color(0xff) // Text color
+
+val Black1 = Color(0xff455974) // card // primary
+val Black2 = Color(0xff17273D) // background
+// val Black3 = Color(0xff) // TextColor
+
+val RedErrorDark = Color(0xFFB00020)
+val RedErrorLight = Color(0xFFEF5350)

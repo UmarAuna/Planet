@@ -186,6 +186,54 @@ object PlanetData {
         )
     )
 
+  /*  val planet = listOf(
+        Planet(
+            days = "58.6 Earth days",
+            diameter = "3,031 miles (4,878 km)",
+            discovery = "Known to the ancient Greeks and visible to the naked eye",
+            distanceFromSun = "57.91 million km",
+            id = 1,
+            moon = 0,
+            orbit = "88 Earth days",
+            originOfName = "Named for the messenger of the Roman gods",
+            planetImage = R.drawable.saturn,
+            planetName = "Mercury",
+            position = 1,
+            planetSummary = "This is the 1st, smallest, and hottest planet in the solar system. It is the nearest to the sun having an average distance of 58 km. Mercury is very close to the sun, this is why it has a very high temperature. Because of its proximity to the sun, metals like zinc or lead dissolve into vapor at such temperatures. Mercury has no satellite of its own, no atmosphere, no cloud, rain, wind, or water and hence life is non-existent on this planet. It has innumerable hills and plain land, cliffs, and valleys just like Earth and the surface of Mercury is covered with craters.",
+            surfaceTemperature = "-173 - 427 °C",
+        ),
+        Planet(
+            id = 2,
+            planetName = "Venus",
+            planetImage = R.drawable.venus,
+            surfaceTemperature = "462 °C",
+            discovery = "Known to the ancient Greeks and visible to the naked eye",
+            originOfName = "Named for the Roman goddess of love and beauty",
+            diameter = "7,521 miles (12,104 km)",
+            orbit = "225 Earth days",
+            days = "241 Earth days",
+            moon = 0,
+            planetSummary = "It is the second closest planet to the sun and the closest to the earth. Venus contains no living things because it is the hottest in the solar system. However, it is similar to Earth in terms of size, weight, and density, hence it is termed the Earth’s twin. Venus planet has no satellite of its own but glows in the sky like a star which makes the majority of people refer to it as a star.",
+            distanceFromSun = "108.2 million km",
+            position = 2
+        ),
+        Planet(
+            id = 3,
+            planetName = "Earth",
+            planetImage = R.drawable.earth,
+            surfaceTemperature = "-88 - 58 °C",
+            discovery = "Earth was never discovered because it was never an unrecognised entity by humans.",
+            originOfName = "The name Earth is a German word \"Die Erde\" which simply means ground",
+            diameter = "7,926 miles (12,760 km)",
+            orbit = "365.24 days",
+            days = "23 hours, 56 minutes",
+            moon = 1,
+            planetSummary = "Being the single natural satellite of the earth, the moon revolves around the earth once every 27days. However, the distance of the Earth from the moon is 384,629 km. The earth is the only planet in whose atmosphere there is the existence of required oxygen, nitrogen, carbon dioxide, and temperature that is necessary for the survival of humans, plants, and animals. Hence, the earth is considered the most important planet in the solar system.",
+            distanceFromSun = "147.87 million km",
+            position = 3
+        )
+    )*/
+
     val singlePlanet = Planets(
         planetName = "Saturn",
         icon = R.drawable.ic_planet_saturn,

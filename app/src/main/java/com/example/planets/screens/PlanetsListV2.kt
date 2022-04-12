@@ -19,7 +19,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.example.planets.DialogDemo
 import com.example.planets.model.Planets
 
 @ExperimentalMaterialApi

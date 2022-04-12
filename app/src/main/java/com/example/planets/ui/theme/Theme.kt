@@ -5,6 +5,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
     primary = Purple200,
@@ -27,6 +28,27 @@ private val LightColorPalette = lightColors(
     */
 )
 
+private val LightThemeColors = lightColors(
+    primary = White1,
+    secondary = White1,
+    error = RedErrorDark,
+    onError = RedErrorLight,
+    background = White2,
+    onBackground = Color(0xff646464),
+    surface = White2,
+    onSurface = Color(0xff000000)
+)
+
+private val DarkThemeColors = darkColors(
+    primary = Black1,
+    secondary = Black1,
+    error = RedErrorLight,
+    background = Black2,
+    onBackground = Color(0xffE1DCDC),
+    surface = Black1,
+    onSurface = Color(0xffE1DCDC)
+)
+
 @Composable
 fun PlanetsTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
     val colors = if (darkTheme) {
@@ -37,7 +59,7 @@ fun PlanetsTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composabl
 
     MaterialTheme(
         colors = colors,
-        typography = Typography,
+        typography = DefaultTypography,
         shapes = Shapes,
         content = content
     )
@@ -46,5 +68,21 @@ fun PlanetsTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composabl
 @Composable
 fun PlanetTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val colors = if (darkTheme) dark else light
-    MaterialTheme(colors = colors, shapes = Shapes, content = content, typography = Typography,)
+    MaterialTheme(
+        colors = colors,
+        shapes = Shapes,
+        content = content,
+        typography = DefaultTypography
+    )
+}
+
+@Composable
+fun NewPlanetTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+    val colors = if (darkTheme) DarkThemeColors else LightThemeColors
+    MaterialTheme(
+        colors = colors,
+        shapes = Shapes,
+        content = content,
+        typography = DefaultTypography
+    )
 }

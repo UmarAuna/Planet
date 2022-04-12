@@ -1,4 +1,4 @@
-package com.example.planets
+package com.example.planets.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column

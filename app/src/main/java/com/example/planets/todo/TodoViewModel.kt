@@ -4,11 +4,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
 class TodoViewModel : ViewModel() {
@@ -17,9 +15,9 @@ class TodoViewModel : ViewModel() {
     val todoList: List<Todo>
         get() = _todoList
 
-    private val _todoListFlow = MutableStateFlow<List<Todo>>()
+   /* private val _todoListFlow = MutableStateFlow<List<Todo>>()
     val observeTodoListsFlow
-        get() = _todoListFlow
+        get() = _todoListFlow*/
 
   /*  private val _todoLists = MutableLiveData<List<Todo>>()
     val observeTodoLists

@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -19,7 +18,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -29,15 +27,15 @@ import androidx.compose.ui.unit.dp
 import com.example.planets.R
 import com.example.planets.model.PlanetData
 import com.example.planets.model.Planets
-import com.example.planets.ui.theme.PlanetTheme
+import com.example.planets.ui.theme.NewPlanetTheme
 import java.util.*
 
 class MainActivity : ComponentActivity() {
-    @ExperimentalMaterialApi
+    @OptIn(ExperimentalMaterialApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            PlanetTheme {
+            NewPlanetTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     // PlanetsList(planets = PlanetData.planetsList)
@@ -58,11 +56,11 @@ fun PlanetsList(planets: List<Planets>) {
     // A surface container using the 'background' color from the theme
     Surface(color = MaterialTheme.colors.background) {
         Column() {
-           /* Text(
+            Text(
                 text = stringResource(R.string.planets),
                 style = MaterialTheme.typography.h4,
                 modifier = Modifier.padding(10.dp)
-            )*/
+            )
 
             val planet = planets.maxByOrNull { it.moon }
 
@@ -73,7 +71,7 @@ fun PlanetsList(planets: List<Planets>) {
             )
 
             LazyColumn() {
-                item {
+                /*item {
                     TopAppBar(
                         title = {
                             Text(
@@ -84,7 +82,7 @@ fun PlanetsList(planets: List<Planets>) {
                         backgroundColor = Color.Transparent,
                         elevation = 2.dp
                     )
-                }
+                }*/
                 items(planets) { planet ->
                     PlanetImageList(planet)
                 }
@@ -131,6 +129,7 @@ fun PlanetImageList(planet: Planets) {
                 .height(120.dp)
                 .padding(vertical = 10.dp, horizontal = 20.dp),
             backgroundColor = MaterialTheme.colors.primary,
+            elevation = 12.dp,
             onClick = {
                 val intent = Intent(context, PlanetDetails::class.java)
                 intent.putExtra("PLANET", planet)
@@ -194,7 +193,7 @@ fun PlanetImageList(planet: Planets) {
     name = "Dark Mode Planets"
 )
 fun DefaultPreview3() {
-    PlanetTheme {
+    NewPlanetTheme {
         PlanetsList(planets = PlanetData.planetsListVector)
     }
 }
